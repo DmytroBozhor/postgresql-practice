@@ -1,0 +1,24 @@
+connect to the db:
+psql --host=localhost --port=5432 --username=postgres --dbname=company_repository
+
+disconnect from database (interchangeable):
+exit
+/q
+
+show the list of all databases existing on the current server:
+\l
+
+Check the list of tables in the current database and the current schema:
+\dt
+
+Check the list of tables along with the sequences:
+\d
+
+Check the fields of tha table and more:
+\d table_name
+
+*After establishing a connection with a database we can run whatever sql queries we want
+
+Switch connection to another database
+\c database_name
+

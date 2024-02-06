@@ -53,3 +53,19 @@ GROUP BY c.name
 HAVING count(e.id) >= 1
 ORDER BY c.name;
 
+CREATE VIEW lowest_two_salaries AS
+SELECT salary
+FROM employee
+ORDER BY salary
+LIMIT 2;
+
+CREATE MATERIALIZED VIEW materialized_lowest_two_salaries AS
+SELECT salary
+FROM employee
+ORDER BY salary
+LIMIT 2;
+
+SELECT avg(salary)
+FROM lowest_two_salaries;
+
+REFRESH MATERIALIZED VIEW materialized_lowest_two_salaries;
