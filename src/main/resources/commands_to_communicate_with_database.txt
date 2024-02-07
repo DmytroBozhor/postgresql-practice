@@ -22,3 +22,21 @@ Check the fields of tha table and more:
 Switch connection to another database
 \c database_name
 
+To begin a transaction:
+begin;
+
+To commit a transaction:
+commit;
+
+To rollback a transaction:
+rollback;
+
+To check the default transaction isolation level:
+show default_transaction_isolation;
+
+To show the current transaction isolation level:
+show transaction isolation level;
+
+To open a transaction in a specific isolation level:
+begin transaction isolation level repeatable read;
+
